@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">НДФЛ</string>
+
+    <string name="summ_net">Введена сумма к выплате</string>
+    <string name="summ_gross">Введена общая сумма</string>
+
+    <string name="tax_rate">Ставка налога</string>
+    <string name="usual13">Обычные доходы 13%</string>
+    <string name="nonresident30">Иностранцы 30%</string>
+    <string name="dividend9">Дивиденды 9%</string>
+    <string name="other_rate">Другая ставка</string>
+
+    <string name="btn_calc">Рассчитать</string>
+    <string name="res_sem_net">Сумма к выплате физ.лицу</string>
+    <string name="res_sum_tax">Сумма налога к уплате</string>
+    <string name="res_all">Общая сумма</string>
+    <string name="zero">0.00</string>
+
 </resources>
