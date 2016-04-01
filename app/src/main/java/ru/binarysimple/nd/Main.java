@@ -2,6 +2,7 @@ package ru.binarysimple.nd;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,14 +15,29 @@ import java.util.Locale;
 
 public class Main extends AppCompatActivity {
 
-    final String TAX13 = "13.00";
-    final String TAX9 = "9.00";
-    final String TAX30 = "30.00";
+    private final String TAX13 = "13.00";
+    private final String TAX9 = "9.00";
+    private final String TAX30 = "30.00";
+    private static final String LOG_TAG = "nd_log";
+    private final static String SAVE_TV_GROSS = "SAVE_TV_GROSSN";
+    private final static String SAVE_TV_NET = "SAVE_TV_NET";
+    private final static String SAVE_TV_TAX = "SAVE_TV_TAX";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        // извлекаем данные
+        TextView tvGross = (TextView) findViewById(R.id.tvGross);
+        TextView tvTax = (TextView) findViewById(R.id.tvTax);
+        TextView tvNet = (TextView) findViewById(R.id.tvNet);
+        if (savedInstanceState != null) {
+            tvGross.setText(savedInstanceState.getString(SAVE_TV_GROSS, getResources().getString(R.string.zero)));
+            tvTax.setText(savedInstanceState.getString(SAVE_TV_TAX, getResources().getString(R.string.zero)));
+            tvNet.setText(savedInstanceState.getString(SAVE_TV_NET, getResources().getString(R.string.zero)));
+        }
+
 
         RadioGroup radiogroup = (RadioGroup) findViewById(R.id.rgTaxes);
 
@@ -62,7 +78,7 @@ public class Main extends AppCompatActivity {
         });
     }
 
-    private void calc (){
+    private void calc() {
         RadioGroup rgBase = (RadioGroup) findViewById(R.id.rgBase);
         RadioGroup rgTaxes = (RadioGroup) findViewById(R.id.rgTaxes);
         TextView tvGross = (TextView) findViewById(R.id.tvGross);
@@ -85,16 +101,14 @@ public class Main extends AppCompatActivity {
                 taxRate = TAX9;
                 break;
             case R.id.rbOther:
-                EditText etOther = (EditText) findViewById(R.id.etTaxrate);
-                taxRate = etOther.getText().toString();
+                taxRate = etTaxrate.getText().toString();
                 break;
             default:
                 break;
         }
 
-        if ((CurrOps.zero(taxRate)) || CurrOps.zero(etBase.getText().toString()))
-        {
-          setToZero();
+        if ((CurrOps.zero(taxRate)) || CurrOps.zero(etBase.getText().toString())) {
+            setToZero();
             return;
         }
 
@@ -110,7 +124,7 @@ public class Main extends AppCompatActivity {
 
                 break;
             case R.id.rbsumGross:
-                String taxG = calcTax(etBase.getText().toString(),taxRate);
+                String taxG = calcTax(etBase.getText().toString(), taxRate);
                 String give = calcGross(taxRate);
                 tvGross.setText(convertC(etBase.getText().toString()));
                 tvTax.setText(taxG);
@@ -121,7 +135,7 @@ public class Main extends AppCompatActivity {
         }
     }
 
-    private void setToZero(){
+    private void setToZero() {
         TextView tvGross = (TextView) findViewById(R.id.tvGross);
         TextView tvTax = (TextView) findViewById(R.id.tvTax);
         TextView tvNet = (TextView) findViewById(R.id.tvNet);
@@ -130,37 +144,46 @@ public class Main extends AppCompatActivity {
         tvNet.setText(getResources().getText(R.string.zero));
     }
 
-    private String calcTaxNet(String base){
+    private String calcTaxNet(String base) {
         EditText etBase = (EditText) findViewById(R.id.etBase);
         Currency curr = Currency.getInstance(Locale.getDefault());
-        return CurrOps.sub(curr,base, etBase.getText().toString());
+        return CurrOps.sub(curr, base, etBase.getText().toString());
     }
 
-    private String convertC(String base){
+    private String convertC(String base) {
         Currency curr = Currency.getInstance(Locale.getDefault());
-        return CurrOps.convertToCurr(curr,base);
+        return CurrOps.convertToCurr(curr, base);
     }
 
-    private String calcGross(String tax){
+    private String calcGross(String tax) {
         EditText etBase = (EditText) findViewById(R.id.etBase);
         Currency curr = Currency.getInstance(Locale.getDefault());
-        String top = CurrOps.mult(curr, etBase.getText().toString(), CurrOps.sub(curr,"100",tax));
-        String bottom = "100";
-        return top;
+        return CurrOps.mult(curr, etBase.getText().toString(), CurrOps.sub(curr, "100", tax));
     }
 
-    private String calcGrossN(String tax){
+    private String calcGrossN(String tax) {
 
         EditText etBase = (EditText) findViewById(R.id.etBase);
         Currency curr = Currency.getInstance(Locale.getDefault());
-        tax = CurrOps.sub(curr,"100",tax);
-        return CurrOps.div(curr,etBase.getText().toString(),tax);
+        tax = CurrOps.sub(curr, "100", tax);
+        return CurrOps.div(curr, etBase.getText().toString(), tax);
     }
 
-    private String calcTax(String base, String tax){
+    private String calcTax(String base, String tax) {
         Currency curr = Currency.getInstance(Locale.getDefault());
-        String top = CurrOps.mult(curr, base, tax);
-        return top;
+        return CurrOps.mult(curr, base, tax);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.d(LOG_TAG, "onSaveInstanceState");
+        TextView tvGross = (TextView) findViewById(R.id.tvGross);
+        TextView tvTax = (TextView) findViewById(R.id.tvTax);
+        TextView tvNet = (TextView) findViewById(R.id.tvNet);
+        outState.putString(SAVE_TV_GROSS, tvGross.getText().toString());
+        outState.putString(SAVE_TV_NET, tvNet.getText().toString());
+        outState.putString(SAVE_TV_TAX, tvTax.getText().toString());
     }
 
 
