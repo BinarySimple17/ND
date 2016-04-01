@@ -92,8 +92,11 @@ public class Main extends AppCompatActivity {
                 break;
         }
 
-        if (CurrOps.zero(taxRate)) return;
-        if (CurrOps.zero(etBase.getText().toString())) return;
+        if ((CurrOps.zero(taxRate)) || CurrOps.zero(etBase.getText().toString()))
+        {
+          setToZero();
+            return;
+        }
 
         switch (rgBase.getCheckedRadioButtonId()) {
             case -1:
@@ -103,13 +106,13 @@ public class Main extends AppCompatActivity {
                 String tax = calcTaxNet(base); //return full sum, then fill taxes.
                 tvGross.setText(base);
                 tvTax.setText(tax);
-                tvNet.setText(etBase.getText().toString());
+                tvNet.setText(convertC(etBase.getText().toString()));
 
                 break;
             case R.id.rbsumGross:
                 String taxG = calcTax(etBase.getText().toString(),taxRate);
                 String give = calcGross(taxRate);
-                tvGross.setText(etBase.getText().toString());
+                tvGross.setText(convertC(etBase.getText().toString()));
                 tvTax.setText(taxG);
                 tvNet.setText(give);
                 break;
@@ -118,10 +121,24 @@ public class Main extends AppCompatActivity {
         }
     }
 
+    private void setToZero(){
+        TextView tvGross = (TextView) findViewById(R.id.tvGross);
+        TextView tvTax = (TextView) findViewById(R.id.tvTax);
+        TextView tvNet = (TextView) findViewById(R.id.tvNet);
+        tvGross.setText(getResources().getText(R.string.zero));
+        tvTax.setText(getResources().getText(R.string.zero));
+        tvNet.setText(getResources().getText(R.string.zero));
+    }
+
     private String calcTaxNet(String base){
         EditText etBase = (EditText) findViewById(R.id.etBase);
         Currency curr = Currency.getInstance(Locale.getDefault());
         return CurrOps.sub(curr,base, etBase.getText().toString());
+    }
+
+    private String convertC(String base){
+        Currency curr = Currency.getInstance(Locale.getDefault());
+        return CurrOps.convertToCurr(curr,base);
     }
 
     private String calcGross(String tax){
@@ -129,7 +146,6 @@ public class Main extends AppCompatActivity {
         Currency curr = Currency.getInstance(Locale.getDefault());
         String top = CurrOps.mult(curr, etBase.getText().toString(), CurrOps.sub(curr,"100",tax));
         String bottom = "100";
-        //return CurrOps.div(curr,top,bottom);
         return top;
     }
 

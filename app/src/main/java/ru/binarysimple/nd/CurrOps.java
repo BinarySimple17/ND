@@ -10,9 +10,15 @@ class CurrOps {
     }
 
     public static Boolean zero(String num){
+        if (num.equals("")) return true;
         num = replace(num);
-        Float d1 = Float.parseFloat(num);
-        return (d1 <= 0);
+        BigDecimal d1 = new BigDecimal(num);
+        return ( d1.compareTo(BigDecimal.ZERO) == 0);
+    }
+
+    public static String convertToCurr(Currency curr, String num){
+        //BigDecimal d1 = new BigDecimal(num);
+        return mult(curr,num,"100");
     }
 
     public static String mult(Currency curr, String num, String denom) {
