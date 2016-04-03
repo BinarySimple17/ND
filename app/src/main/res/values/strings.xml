@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">НДФЛ</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 
     <string name="summ_net">Введена сумма к выплате</string>
     <string name="summ_gross">Введена общая сумма</string>
