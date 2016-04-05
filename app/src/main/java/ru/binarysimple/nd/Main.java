@@ -124,8 +124,8 @@ public class Main extends AppCompatActivity {
             case R.id.rbSumNet: //сумма к выплате
                 String base = calcGrossN(taxRate); //получаю полную сумму оклада
                 String taxSum = calcTaxNet(base); //получаю сумму налогов. вычитанием
-                tvGross.setText(calcFullNet(convertC(etBase.getText().toString()),taxSum));
-                tvTax.setText(taxSum);
+                tvGross.setText(convertC(calcFullNet(convertC(etBase.getText().toString()),taxSum)));
+                tvTax.setText(convertC(taxSum));
                 tvNet.setText(convertC(etBase.getText().toString()));
 
                 break;
@@ -133,8 +133,8 @@ public class Main extends AppCompatActivity {
                 String taxG = calcTax(etBase.getText().toString(), taxRate); //получаем сумму налога
                 String give = calcGross(taxG); //получаю сумму на руки dsxbnfybtv.
                 tvGross.setText(convertC(etBase.getText().toString()));
-                tvTax.setText(taxG);
-                tvNet.setText(give);
+                tvTax.setText(convertC(taxG));
+                tvNet.setText(convertC(give));
                 break;
             default:
                 break;

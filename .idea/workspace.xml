@@ -59,15 +59,15 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ru/binarysimple/nd/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5080275">
-              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.625">
+              <caret line="123" column="32" selection-start-line="123" selection-start-column="32" selection-end-line="123" selection-end-column="32" />
               <folding>
                 <element signature="e#1531#1570#0" expanded="true" />
                 <element signature="e#1642#1681#0" expanded="true" />
                 <element signature="e#1753#1792#0" expanded="true" />
-                <element signature="e#5536#5573#0" expanded="true" />
-                <element signature="e#5598#5635#0" expanded="true" />
-                <element signature="e#5660#5697#0" expanded="true" />
+                <element signature="e#5576#5613#0" expanded="true" />
+                <element signature="e#5638#5675#0" expanded="true" />
+                <element signature="e#5700#5737#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,7 +110,7 @@
     </option>
   </component>
   <component name="GenerateSignedApkSettings">
-    <option name="KEY_STORE_PATH" value="C:\android5\projects\binarysimple.jks" />
+    <option name="KEY_STORE_PATH" value="C:\android5\projects\UI\binarysimple.jks" />
     <option name="KEY_ALIAS" value="binarysimple" />
     <option name="REMEMBER_PASSWORDS" value="true" />
   </component>
@@ -1827,7 +1827,7 @@
     <property name="FullScreen" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="API_19" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../binarysimple.jks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../UI/binarysimple.jks" />
     <property name="ExportApk.ApkPath" value="c:\android5\projects\ND\app" />
     <property name="ExportApk.Flavors" value="" />
     <property name="ExportApk.BuildType" value="release" />
@@ -2062,9 +2062,9 @@
             <element signature="e#1531#1570#0" expanded="true" />
             <element signature="e#1642#1681#0" expanded="true" />
             <element signature="e#1753#1792#0" expanded="true" />
-            <element signature="e#5536#5573#0" expanded="true" />
-            <element signature="e#5598#5635#0" expanded="true" />
-            <element signature="e#5660#5697#0" expanded="true" />
+            <element signature="e#5576#5613#0" expanded="true" />
+            <element signature="e#5638#5675#0" expanded="true" />
+            <element signature="e#5700#5737#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2375,15 +2375,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ru/binarysimple/nd/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5080275">
-          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.625">
+          <caret line="123" column="32" selection-start-line="123" selection-start-column="32" selection-end-line="123" selection-end-column="32" />
           <folding>
             <element signature="e#1531#1570#0" expanded="true" />
             <element signature="e#1642#1681#0" expanded="true" />
             <element signature="e#1753#1792#0" expanded="true" />
-            <element signature="e#5536#5573#0" expanded="true" />
-            <element signature="e#5598#5635#0" expanded="true" />
-            <element signature="e#5660#5697#0" expanded="true" />
+            <element signature="e#5576#5613#0" expanded="true" />
+            <element signature="e#5638#5675#0" expanded="true" />
+            <element signature="e#5700#5737#0" expanded="true" />
           </folding>
         </state>
       </provider>
