@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="cardStyle">@style/CardView.Light</item>-->
     </style>
 
     <style name="FullscreenTheme" parent="AppTheme">
@@ -28,5 +29,21 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppThemeDark" parent="Theme.AppCompat" >
+        <item name="colorPrimary">@color/colorPrimaryD</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkD</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="cardStyle">@style/CardView.Dark</item>
+    </style>
+
+    <attr format="reference" name="cardStyle"/>
+    <style name="Light" parent="Theme.AppCompat.NoActionBar">
+        <item name="cardStyle">@style/CardView.Light</item>
+    </style>
+
+    <style name="Dark" parent="AppThemeDark">
+        <item name="cardStyle">@style/CardView.Dark</item>
+    </style>
 
 </resources>

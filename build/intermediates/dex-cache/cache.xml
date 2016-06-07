@@ -1,3 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="F:\android5\projects\ND\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="F:\android5\projects\ND\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.3.0_69f7cec86a8533976ff7ff3d009a20e4f442a870.jar" />
+    </item>
+    <item
+        jar="F:\android5\projects\ND\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="82ce13fd19cdfde0e392f03c27edeba8d4333648">
+        <dex dex="F:\android5\projects\ND\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-23.3.0_94097e6ce115d3067407085d2260c0c0af71f8fe.jar" />
+    </item>
+    <item
+        jar="F:\android5\projects\ND\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="b5e7892fb0708e792e0e933c4c0a0ca0ac7831fb">
+        <dex dex="F:\android5\projects\ND\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-ads-8.4.0_8e4a318bc244b8a1357db97e4d4d732cc1faa53c.jar" />
+    </item>
+    <item
+        jar="F:\android5\projects\ND\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="F:\android5\projects\ND\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.3.0_59fa4321d09888dbfad08586847aa2fc498f3f46.jar" />
+    </item>
+    <item
+        jar="F:\android5\projects\ND\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="F:\android5\projects\ND\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.4.0_4f5a99b7946e91f6f3a4ca5e469cf1e3b581a67a.jar" />
+    </item>
+    <item
+        jar="F:\android5\projects\ND\app\build\intermediates\exploded-aar\com.android.support\design\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="F:\android5\projects\ND\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.3.0_d1784baba057cdb161d757be90a7a0f53b66a10e.jar" />
+    </item>
+    <item
+        jar="F:\android5\projects\ND\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="df69f2ef5c7db3278b9d117b4e72ae5683861b4e">
+        <dex dex="F:\android5\projects\ND\app\build\intermediates\pre-dexed\debug\instant-run_53e2fa674a72e576ef8d360cd6593e9567698633.jar" />
+    </item>
+    <item
+        jar="F:\android5\projects\ND\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="F:\android5\projects\ND\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.3.0_52f3a203b609355f669013cad096cfede04a3782.jar" />
+    </item>
+    <item
+        jar="F:\android5\projects\ND\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="F:\android5\projects\ND\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.3.0_09984e46a80d619d14e89d85a5b2ed1384ba3b17.jar" />
+    </item>
+    <item
+        jar="F:\android5\projects\ND\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="F:\android5\projects\ND\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.3.0_80ff5c1a76b848c4e051209a94dd9a9b67e21908.jar" />
+    </item>
+    <item
+        jar="F:\android5\sdk\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="F:\android5\projects\ND\app\build\intermediates\pre-dexed\debug\support-annotations-23.3.0_08ef3a684a5349fc548f35b2be013d05691a8900.jar" />
+    </item>
+    <item
+        jar="F:\android5\projects\ND\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="F:\android5\projects\ND\app\build\intermediates\pre-dexed\debug\internal_impl-23.3.0_0bc0f0d2e73d77f0caa825530f58bdd666b6a053.jar" />
+    </item>
+    <item
+        jar="F:\android5\projects\ND\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c025bb17dd5cae158e537960609a3fa55eced4bb">
+        <dex dex="F:\android5\projects\ND\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_3ca3f23b61a38532efe654d3f95e39fe0ca95ff8.jar" />
+    </item>
+
+</items>
